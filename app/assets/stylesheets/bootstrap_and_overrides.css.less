@@ -1,0 +1,135 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+
+
+//// Main properties \\\\
+html{
+background-color: #FFE5B0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content-center {
+		min-width: 400px;
+		max-width: 600px;
+		margin: 0 auto;
+}
+
+.links {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  a{
+  padding: 2px;
+  }
+}
+
+body {
+      width: 100%;
+      background-color: #FFE5B0;
+      }
+
+
+//// Menu \\\\
+.navbar {
+	margin-bottom: 40px;
+	height: 1.7em;
+	.brand {
+	color: #00C93E;
+	text-shadow: #00FF72 1px 0px;
+	font-size: 1.6em;
+	a.brand:hover{
+		background-color: #7709BD;
+		}
+	}
+	.active {
+		a{
+		background-image: linear-gradient(#CA77FF, #A10DFF)
+		}
+	}
+	.dropdown .open {
+		  background-color: #D29AFF;
+		  }
+	.dropdown-menu > li:hover {
+		       background-color: #805E9C;
+		       }
+	.navbar-inner {
+		      background-image: linear-gradient(#A25FCC, #7109B2);
+		     .nav-pills {
+		     		margin-top: 2px;
+				margin-bottom: 2px;
+		         a {
+			   font-size: 1.5em;
+		   	    color: #00C93E;
+		   	    text-shadow: #00FF72 0px 1px;
+		   	}
+			}
+		      }
+	 }
+
+//// Forms \\\\
+
+.simple_form {
+     margin: 0 auto;
+     width: 220px;
+}
+
+.form-actions {
+	      background-color: inherit;
+	      border-top: 0px;
+	      position: relative;
+	      margin-left: 0;
+	      width: 120px;
+	      padding: 0;
+	      margin-left: 0;
+	      }
+
+
+//// Footer \\\\
+
+#footer {
+	margin-top: 40px;
+	width: 300px;
+	height: 50px;
+	margin: 0 auto;
+	border-radius: 50px;
+	background-color: #FF9700;
+	text-align: center;
+	p{
+	padding-top: 17px;
+	}
+}
+
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;

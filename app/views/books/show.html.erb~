@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<div class="cover">
+	<%= image_tag @book.cover_url if @book.cover? %>
+</div>
+
+<div class="form-actions">
+  <% if @book.cover %>
+  <%= link_to 'Crop cover', crop_book_path(@book) %>
+  <% end %>
+</div>
+
+<br />
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Review:</strong>
+  <%= @book.review %>
+</p>
+
+<p>
+  <strong>Reviewer:</strong>
+  <%= @book.reviewer %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
