@@ -53,7 +53,6 @@ end
 
 gem 'rmagick'
 gem 'carrierwave', '~> 0.10.0'
-gem 'cloudinary'
 
 gem 'jcrop-rails-v2', '~> 0.9.12.3'
 
@@ -66,3 +65,5 @@ gem 'twitter-bootstrap-rails'
 gem 'navigasmic'
 
 gem 'taps'
+
+gem 'cloudinary'
