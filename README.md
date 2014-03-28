@@ -1,13 +1,17 @@
-This is my Ruby on Rails Project.
+# This is my Ruby on Rails Project.
+==================================
 
-Until now I used these gems:
-* rmagick
-* carrierwave
-* jcrop-rails-v2
-* simple_form
-* quiet_assets
-* less-rails
-* twitter-bootstrap-rails
-* navigasmic
 
-But there is still more to explore :)
+## Until now I used these gems:
+-----------------------------
+* *rmagick* methods: resize_to_fit
+* *carrierwave* uploader for covers from URL or local disk
+* *jcrop-rails-v2* cover crop
+* *simple_form* forms for adding end editing reviews
+* *less-rails* using less, not scss for css generation
+* *twitter-bootstrap-rails* bootstrap for views
+* *navigasmic* menu generation
+* *cloudinary* cloud storage for images
+
+I also added about site.
+

@@ -6,9 +6,11 @@ class CoverUploader < CarrierWave::Uploader::Base
    include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
-  def cache_dir
-    "#{Rails.root}/tmp/uploads"
-  end
+  include Cloudinary::Carrierwave
+
+  process :convert => 'png'
+  process :tags => ['book_cover']
+
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -36,7 +38,8 @@ class CoverUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-   process :resize_to_fit => [200,400]
+  
+  process :resize_to_fit => [200,400]
 
    version :thumb do
      process :crop
