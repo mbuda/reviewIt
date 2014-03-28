@@ -1,9 +1,8 @@
 # This is my Ruby on Rails Project.
-==================================
 
 
 ## Until now I used these gems:
------------------------------
+
 * *rmagick* methods: resize_to_fit
 * *carrierwave* uploader for covers from URL or local disk
 * *jcrop-rails-v2* cover crop
