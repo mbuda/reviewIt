@@ -1,12 +1,10 @@
 # encoding: utf-8
 
 class CoverUploader < CarrierWave::Uploader::Base
-
+  include Cloudinary::Carrierwave
   # Include RMagick or MiniMagick support:
    include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-
-  include Cloudinary::Carrierwave
 
   process :convert => 'png'
   process :tags => ['book_cover']
