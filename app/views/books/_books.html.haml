@@ -1,0 +1,12 @@
+- books.each do |book|
+  .book
+    = image_tag(book.cover_url(:thumb)) if book.cover?
+    %p= book.title
+    %p= book.author
+    %p= book.review
+    %p= book.reviewer
+
+    .book-actions
+      = link_to 'Show', book
+      = link_to 'Edit', edit_book_path(book)
+      = link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?'}

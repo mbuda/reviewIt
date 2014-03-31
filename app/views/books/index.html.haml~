@@ -1,0 +1,9 @@
+%h1 Books' reviews
+
+
+#books-container
+  = render :partial => 'books', :locals => { :books => @books }
+  = link_to 'Load more reviews', books_path(:page => books => @books.next_page), :class => 'load-more-reviews', :remote => true if @books.next_page
+
+= javascript_include_tag "books"
+

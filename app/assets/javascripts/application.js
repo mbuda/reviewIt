@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require isotope.pkgd.min
+//= require_tree .
+//= require jquery.inview.min.js
