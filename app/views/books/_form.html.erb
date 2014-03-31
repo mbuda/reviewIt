@@ -13,9 +13,6 @@
     <%= f.input :cover, label: "Upload file from your disk", as: :file %>
     <%= f.hidden_field :cover_cache %>
     <%= f.input :remote_cover_url, label: "or via url from Internet" %>
-    <% unless @book.new_record? %>
-	<%= f.input :remove_cover, label: "remove cover", as: :boolean %>
-    <% end %> 
     </div>
     <div class="form-inputs">
     <%= f.input :author %>

@@ -1,24 +1,24 @@
 # encoding: utf-8
 
 class CoverUploader < CarrierWave::Uploader::Base
-  include Cloudinary::Carrierwave
+  include Cloudinary::CarrierWave
   # Include RMagick or MiniMagick support:
    include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   process :convert => 'png'
-  process :tags => ['book_cover']
+  process :tags => ['cover']
 
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+ # storage :file
+ #  storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
+ # def store_dir
+  #  "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+ # end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
@@ -37,24 +37,12 @@ class CoverUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   
-  process :resize_to_fit => [200,400]
+  process :resize_to_fill => [200,400]
 
    version :thumb do
-     process :crop
-     process :resize_to_fit => [100, 200]
+     process :resize_to_fill => [100, 200]
    end
   
-def crop
-  if model.crop_x.present?
-    manipulate! do |img|
-      x = model.crop_x.to_i
-      y = model.crop_y.to_i
-      w = model.crop_w.to_i
-      h = model.crop_h.to_i
-      img.crop!(x,y,w,h)
-      end
-    end
-  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

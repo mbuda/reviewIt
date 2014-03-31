@@ -54,8 +54,6 @@ end
 gem 'rmagick'
 gem 'carrierwave', '~> 0.10.0'
 
-gem 'jcrop-rails-v2', '~> 0.9.12.3'
-
 gem 'simple_form', '~> 3.0.1'
 gem 'quiet_assets', '~> 1.0.2'
 

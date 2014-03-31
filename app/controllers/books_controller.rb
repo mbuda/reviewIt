@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy, :crop, :update_crop]
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   # GET /books
   # GET /books.json
@@ -65,20 +65,6 @@ class BooksController < ApplicationController
     end
   end
 
-  # GET /books/1/crop
-  def crop
-  end
-
-  #PATCH/PUT /books/1/update_crop
-  def update_crop
-    respond_to do |format|
-      if @book.update(book_params)
-        format.html { redirect_to books_url, notice: 'Cover was updated.' }
-      else
-        format.html { render action: 'edit' }
-      end
-    end
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -88,6 +74,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:author, :title, :review, :reviewer, :cover, :remove_cover, :cover_cache, :remote_cover_url, :crop_x, :crop_y, :crop_w, :crop_h)
+      params.require(:book).permit(:author, :title, :review, :reviewer, :cover, :remove_cover, :cover_cache, :remote_cover_url)
     end
 end

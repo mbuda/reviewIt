@@ -1,11 +1,6 @@
 Reviews::Application.routes.draw do
   resources :books do
-    member do 
-      get 'crop'
-      patch 'update_crop'
-    end
   end
-  
    get '/about' => 'books#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
