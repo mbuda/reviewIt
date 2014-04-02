@@ -1,3 +1,11 @@
 class Book < ActiveRecord::Base
-	mount_uploader :cover, CoverUploader
+  mount_uploader :cover, CoverUploader
+  self.per_page = 5
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['title LIKE ?', "%#{search}%"])
+    else
+      limit(0)
+    end
+  end
 end
