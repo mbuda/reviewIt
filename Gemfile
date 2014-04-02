@@ -8,22 +8,25 @@ group :development do
 gem 'sqlite3'
 end
 
-# Use SCSS for stylesheets
-#gem 'sass-rails', '~> 4.0.0'
+group :assets do 
+      # Use SCSS for stylesheets
+      #gem 'sass-rails', '~> 4.0.0'
+      # Use Uglifier as compressor for JavaScript assets
+      gem 'uglifier', '>= 1.3.0'
+
+      # Use CoffeeScript for .js.coffee assets and views
+      gem 'coffee-rails', '~> 4.0.0'
+      # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+      gem 'therubyracer', platforms: :ruby
+
+      # Use jquery as the JavaScript library
+      gem 'jquery-rails'
+
+      gem 'less-rails'
+      gem 'twitter-bootstrap-rails'
+end
 
 gem 'haml-rails'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks'
@@ -58,9 +61,6 @@ gem 'carrierwave', '~> 0.10.0'
 
 gem 'simple_form', '~> 3.0.1'
 gem 'quiet_assets', '~> 1.0.2'
-
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
 
 gem 'navigasmic'
 
