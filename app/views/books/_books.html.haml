@@ -1,10 +1,10 @@
 - books.each do |book|
   .book
     = image_tag(book.cover_url(:thumb)) if book.cover?
-    %p= book.title
-    %p= book.author
-    %p= book.review
-    %p= book.reviewer
+    %p= book.title.truncate(45, separator: ' ')
+    %p= book.author.truncate(45, separator: ' ')
+    %p= book.review.truncate(150, separator: ' ')
+    %p= book.reviewer.truncate(45, separator: ' ')
 
     .book-actions
       = link_to 'Show', book

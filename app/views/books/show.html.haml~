@@ -1,0 +1,26 @@
+%p{ :id => notice}= notice
+.content-center
+  .cover
+    = image_tag @book.cover_url if @book.cover?
+
+  %br
+  %p
+    %strong Author:
+      = @book.author
+
+  %p
+    %strong Title:
+      = @book.title
+
+  %p
+    %strong Review:
+      = @book.review
+
+  %p
+    %strong Reviewer:
+      = @book.reviewer
+  .links
+    .btn.btn-info
+      = link_to 'Edit', edit_book_path(@book)
+    .btn.btn-info
+      = link_to 'Back', books_path

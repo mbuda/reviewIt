@@ -1,0 +1,21 @@
+= simple_form_for(@book) do |f|
+  = f.error_notification
+
+  .control-group.string.optional
+    .controls
+    - if @book.cover?
+      = image_tag @book.cover_url(:thumb)
+
+
+  .form-inputs
+    = f.input :cover, label: "Upload file from your disk", as: :file
+    = f.hidden_field :cover_cache
+    = f.input :remote_cover_url, label: "or via url from Internet"
+  .form-inputs
+    = f.input :author
+    = f.input :title 
+    = f.input :review
+    = f.input :reviewer
+
+  .form-actions
+    = f.button :submit

@@ -4,13 +4,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.paginate(:page => params[:page], per_page: 5).order('created_at DESC')
-
-    respond_to do |format|
-      format.html
-      format.json { render json: @books }
-      format.js
-    end
+@books = Book.paginate(:page => params[:page]).search(params[:search])
   end
 
   # GET /about
