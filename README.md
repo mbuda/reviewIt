@@ -3,7 +3,7 @@
 
 ## I used these gems:
 
-* *rmagick* methods: resize_to_fit
+* *rmagick* methods: resize_to_fit for covers
 * *carrierwave* uploader for covers from URL or local disk
 * *simple_form* forms for adding end editing reviews
 * *less-rails* using less, not scss for css generation
@@ -13,5 +13,5 @@
 * *will_paginate* for pagination
 
 
-I also added about site, changed all .erb files to HAML, override some bootstrap settings, made infinite scrolling and searching by author, title, reviewer.
+I also added about site, changed all .erb files to HAML, override some bootstrap settings, made infinite scrolling(check this [tutorial]: http://christianvarga.com/simple-infinite-scroll-with-rails-and-jquery/ and searching by author, title, reviewer.
 
