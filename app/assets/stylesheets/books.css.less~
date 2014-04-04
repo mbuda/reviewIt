@@ -1,7 +1,0 @@
-@book-bg: #00FF6F;
-
-.book {
-	width: 300px;
-	background-color: @book-bg;
-	margin-bottom: 20px;
-}
