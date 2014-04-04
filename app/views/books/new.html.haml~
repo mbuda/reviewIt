@@ -1,6 +1,0 @@
-%h1 New book
-
-= render 'form'
-
-.links
-  %button.btn.btn-info link_to 'Back', books_path
